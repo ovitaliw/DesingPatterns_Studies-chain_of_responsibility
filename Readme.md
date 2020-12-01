@@ -40,8 +40,10 @@ Vamos ver isso em código da maneira mais simples e direta possivel [v1.0](https
 
 Note que é um algoritmo bem simples mas que reflete um problema bem comum.
 Diversos 'if's encadeados para realizar uma validação sobre algo, aqui temos apenas 4 caminhos, 
-mas imagine que seja necessários adicionar novas regras a esta validação, logo este método ficará 
-péssimo para realizar a manutenção e entender o que realmente esta sendo feito.    
+mas imagine que seja necessários adicionar novas regras a esta validação ou que ao invés uma simples verificação lógica
+seja necessário realizar outros calculos, consulta a dados de outras entidades, etc. para realizar a validação, 
+mesmo criando métodos especificos para cada a validação de cada 'if', 
+logo este método ficará péssimo para realizar a manutenção e entender o que realmente esta sendo feito.    
  
 E é ai que entram os padrões de projetos para ajudar nas resoluções de problemas e sem 
 gerar alta complexidade ciclomática para o método.   
@@ -57,8 +59,18 @@ Este padrão se encaixa perfeitamente para solução deste problema apresentado.
 
 Vamos refatorar o código anterior para utilizar este padrão.
 
-Primeiramente vamos escrever um teste unitário simples para garantir a nossa refatoração.  
+Primeiramente vamos escrever um teste unitário simples para garantir a nossa refatoração. [v1.1](https://github.com/ovitaliw/DesingPatterns_Studies-chain_of_responsibility/blob/1.1/test.py)
+
+Vamos começar criando a interface e uma classe base para a nossa cadeia de validadores do *FizzBuzz*.
+<br>*Para facilitar a visualização irei criar a interface e a classe base em um arquivo separado das classes concretas*  
+
+Agora vamos para as classes concretas que serão resposáveis por aplicar as validações necessárias e 
+criar um método para criar a corrente com os validadores. 
+
+Feito isso é hora de refatorar o método inicial. 
+
+Veja com método principal ficou mais simples e todas as regras de validações ficaram isoladas e faceis de entender.
 
 
-
-Para mais detalhes sobre o padrão recomendo ler o artigo sobre o CoR do site [Refactoring Guru](https://refactoring.guru/pt-br/design-patterns/chain-of-responsibility)
+Lembrando que esta não é a unica utilidade deste padrão e que ele pode ser usado em diversos outros casos,<br> 
+para mais detalhes sobre o padrão recomendo ler o artigo sobre o CoR do site [Refactoring Guru](https://refactoring.guru/pt-br/design-patterns/chain-of-responsibility)
