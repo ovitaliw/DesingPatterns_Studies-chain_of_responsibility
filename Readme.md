@@ -61,13 +61,13 @@ Vamos refatorar o código anterior para utilizar este padrão.
 
 Primeiramente vamos escrever um teste unitário simples para garantir a nossa refatoração. [v1.1](https://github.com/ovitaliw/DesingPatterns_Studies-chain_of_responsibility/blob/1.1/test.py)
 
-Vamos começar criando a interface e uma classe base para a nossa cadeia de validadores do *FizzBuzz*.
+Vamos começar criando a interface e uma classe base para a nossa cadeia de validadores do *FizzBuzz*. [fizzbuzz_validators_abstract.py](https://github.com/ovitaliw/DesingPatterns_Studies-chain_of_responsibility/blob/2.0/fizzbuzz_validators_abstract.py)
 <br>*Para facilitar a visualização irei criar a interface e a classe base em um arquivo separado das classes concretas*  
 
 Agora vamos para as classes concretas que serão resposáveis por aplicar as validações necessárias e 
-criar um método para criar a corrente com os validadores. 
+criar um método para criar a corrente com os validadores. [fizzbuzz_validators.py](https://github.com/ovitaliw/DesingPatterns_Studies-chain_of_responsibility/blob/2.0/fizzbuzz_validators.py) 
 
-Feito isso é hora de refatorar o método inicial. 
+Feito isso é hora de refatorar o método inicial. [fizzbuzz.py](https://github.com/ovitaliw/DesingPatterns_Studies-chain_of_responsibility/blob/2.0/fizzbuzz.py)
 
 Veja com método principal ficou mais simples e todas as regras de validações ficaram isoladas e faceis de entender.
 
