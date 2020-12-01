@@ -36,6 +36,29 @@ próprio valor de acordo com as seguintes regras.
 - Para multiplos de 5 deve-se imprimir 'Buzz'
 - Para valores não multiplos de 3 ou 5 imprimir o próprio número
 
-Vamos ver isso em código da maneira mais simples e direta possivel.   
+Vamos ver isso em código da maneira mais simples e direta possivel [v1.0](https://github.com/ovitaliw/DesingPatterns_Studies-chain_of_responsibility/blob/1.0/fizzbuzz.py)
 
-  
+Note que é um algoritmo bem simples mas que reflete um problema bem comum.
+Diversos 'if's encadeados para realizar uma validação sobre algo, aqui temos apenas 4 caminhos, 
+mas imagine que seja necessários adicionar novas regras a esta validação, logo este método ficará 
+péssimo para realizar a manutenção e entender o que realmente esta sendo feito.    
+ 
+E é ai que entram os padrões de projetos para ajudar nas resoluções de problemas e sem 
+gerar alta complexidade ciclomática para o método.   
+
+
+#### Chain of responsability ####
+
+Chain of responsability, ou CoR é um padrão de projeto comportamental onde você passa um objeto, valor, algo qualquer, 
+para uma série de manipuladores ou validadores, comumente chamados de *Handlers*, encadeados que decidem se devem 
+realizar o processamento do objeto ou encaminhar para o proximo handler da corrente.
+
+Este padrão se encaixa perfeitamente para solução deste problema apresentado. 
+
+Vamos refatorar o código anterior para utilizar este padrão.
+
+Primeiramente vamos escrever um teste unitário simples para garantir a nossa refatoração.  
+
+
+
+Para mais detalhes sobre o padrão recomendo ler o artigo sobre o CoR do site [Refactoring Guru](https://refactoring.guru/pt-br/design-patterns/chain-of-responsibility)
