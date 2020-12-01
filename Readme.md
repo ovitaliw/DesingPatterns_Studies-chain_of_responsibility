@@ -1,5 +1,11 @@
 # Aplicação prática do Chain of Responsability #
 
+|tag |description|
+|---:|:---------|
+|[1.0](https://github.com/ovitaliw/DesingPatterns_Studies-chain_of_responsibility/tree/1.0)| Solução simples sem Chain of Responsability|
+|[1.1](https://github.com/ovitaliw/DesingPatterns_Studies-chain_of_responsibility/tree/1.1)| Adicionar teste unitário|
+|[2.0](https://github.com/ovitaliw/DesingPatterns_Studies-chain_of_responsibility/tree/2.0)| Refatorar para uso do Chain of Responsability|
+
 Umas das partes mais difícies da aplicação de padrões de projeto é saber quando e 
 onde cada padrão pode ser utilizado. 
 
